@@ -19,7 +19,12 @@ app.get('/', function (req, res) {
         stuff: 'This is stuff...'
     });
 });
+//create route to about 
+app.get('/about.html', function (req, res) {
+    res.render('about');
+});
 
+//API KEY pk_a76f8e36e6654855a196bd559508743a
 
 //Create a static folder => public
 app.use(express.static(path.join(__dirname, 'public')));
