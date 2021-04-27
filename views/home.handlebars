@@ -1,2 +1,13 @@
-<h1>This is handlebars homepage...</h1>
-<p>{{stuff}}</p>
+<h1>{{stock.companyName}} ({{stock.symbol }})<br/><br/></h1>
+<br/>
+<strong>Real-Time Price: </strong>{{stock.iexRealtimePrice}}<br/>
+<strong>Latest Time: </strong>{{stock.latestTime}}<br/>
+<strong>52-Week High: </strong>{{stock.week52High}}<br/>
+<strong>52-Week Low </strong>{{stock.week52Low}}<br/>
+<strong>Market open: </strong>{{stock.isUSMarketOpen}}<br/>
+<p>{{stock}}</p>
+<br/><br/>
+
+{{#each stock}}
+{{@key}} || {{@this}}<br/>
+{{/each}}
