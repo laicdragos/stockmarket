@@ -38,6 +38,9 @@ app.post('/', function (req, res) {
     }, req.body.stock_ticker);
 });
 
+app.get('/', function (req, res) {
+    res.render('home');
+});
 
 //create route to Home 
 app.get('/home.html', function (req, res) {
