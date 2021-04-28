@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
         res.render('home',{
             stock: doneAPI
         });
-    },'gme');
+    },'swn');
 });
 
 //Set handlebar index POST route.
@@ -53,9 +53,10 @@ function call_api(finishedAPI, ticker){
   finishedAPI(body);
 });
 };
-
+setInterval(call_api, 1000);
 //Create a static folder => public
 app.use(express.static(path.join(__dirname, 'public')));
 //path defines the path to public also routing files for static file
 
 app.listen(PORT, () => console.log('Server Listening on port ' + PORT));
+
