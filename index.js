@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
         res.render('home',{
             stock: doneAPI
         });
-    });
+    },'gme');
 });
 
 //Set handlebar index POST route.
