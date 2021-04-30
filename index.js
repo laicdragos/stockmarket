@@ -50,14 +50,10 @@ function call_api(finishedAPI,ticker){
     }
   if(res.statusCode === 200)
   {finishedAPI(body);}
-  settime();
     });
+    
 };
-var timeout;
 
-function settime(){
-    timeout = setTimeout(call_api,5000);
-}
 
 
 
