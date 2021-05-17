@@ -15,4 +15,49 @@ footer {
     bottom: 0;
     width: 100%;
     background: grey;
+    z-index: -1;
 }
+
+
+.swiper-container {
+    height: 250px;
+}
+.swiper-slide {
+        background: grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+    }
+  
+.swiper-button-next, .swiper-button-prev{
+    cursor: pointer;
+    margin-top: -60px !important;
+    z-index: 2;
+    transition: 0.2s all linear  !important;
+    position: absolute;
+    top: 50% !important;
+    opacity: 1;
+    width: 50px !important;
+    background-color: rgba(0,0,0,0.2) ;
+    height: 120px !important;
+    color:white !important;
+}
+
+.swiper-button-next
+    {
+        
+        border-radius: 0 4px 4px 0 ;
+        right: 0  !important;
+    }
+
+.swiper-button-prev
+    {
+        border-radius: 4px 0 0 4px;
+        left: 0  !important;
+    }
+
+.swiper-button-prev:hover, .swiper-button-next:hover  {
+    background-color:rgba(0,0,0,0.5);
+}
+

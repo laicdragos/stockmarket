@@ -26,7 +26,7 @@ app.set('view engine', 'handlebars');
         res.render('stocks',{
             stock: doneAPI
         });
-    },'gme');
+    },'swn');
     
 });
 
@@ -54,28 +54,50 @@ function call_api(finishedAPI,ticker){
     
 };
 
-
+function randomStock() {
+  return Math.random();
+}
 
 
 //--------------------------------------------------------------
 
 app.get('/', function (req, res) {
-    res.render('home');
+    res.render('about');
 });
 
 //create route to Home 
-app.get('/home.html', function (req, res) {
-    res.render('home');
-});
+//app.get('/home.html', function (req, res) {
+  //call_api( function(doneAPI) {
+    //  res.render('home',{
+      //    stock: doneAPI
+      //});
+  //},'gme');  
+//});
 
 //create route to about 
 app.get('/about.html', function (req, res) {
     res.render('about');
 });
 
+
+//create route to login 
+app.get('/login.html', function (req, res) {
+  res.render('login');
+});
+
+
+//create route to register 
+app.get('/register.html', function (req, res) {
+  res.render('register');
+});
+
+
+
 //Create a static folder => public
 app.use(express.static(path.join(__dirname, 'public')));
 //path defines the path to public also routing files for static file
 
 app.listen(PORT, () => console.log('Server Listening on port ' + PORT));
+
+
 
