@@ -5,10 +5,11 @@ nav {
     background-color: #e4e4e4;
     text-align:left;
     padding: 20px 40px;
+    width: 100%;
 }
-.jumbotron h1{
-    font-size: 30px;
-    font-weight: 400;
+.jumbotron h4{
+    font-size: 12px;
+    font-weight: 600;
 }
 footer {
     position: fixed;
@@ -20,14 +21,22 @@ footer {
 
 
 .swiper-container {
-    height: 250px;
+    height: 200px;
 }
 .swiper-slide {
-        background: grey;
+        background: rgb(75, 63, 243);
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 60px;
+        font-size: 12px;
+        margin-right: 50px;
+        transition: transform .3s;
+        
+    }
+
+    .swiper-slide:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 11px rgba(33,33,33,.4); 
     }
   
 .swiper-button-next, .swiper-button-prev{

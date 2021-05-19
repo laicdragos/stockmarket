@@ -21,52 +21,29 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="home.html">Stock Watch</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-       <!-- <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="home.html">Home</a>
-        </li> -->
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="stocks.html">Stocks</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-      </ul>
-      <form class="d-flex" action="/" method="POST">
-        <input class="form-control me-2" type="search" placeholder="Search Symbol" aria-label="Search" name="stock_ticker">
-        <button class="btn btn-outline-secondary" type="submit">Search</button>
-      </form>
-      <div class='logregform'>
-      <ul class="navbar-nav me-auto mb- mb-lg-6">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="login.html">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="register.html">Register</a>
-        </li>
-      </ul>
-      </div>
-    </div>
-  </div>
-</nav>  
-</br>
     <div class='container'>
         <!-- Slider main container -->
 <div class="swiper-container">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
-      <div class="swiper-slide">Slide 1 </div>
+      <div class="swiper-slide"><div class="jumbotron">
+  <h4 class="display-6">{{stock.companyName}} | ({{stock.symbol }})</h1>
+  <hr class="my-3">
+<strong>Real-Time Price: </strong>{{stock.latestPrice}}$<br/>
+<strong>Previous close: </strong>{{stock.previousClose}}$<br/>
+<strong>After Hours: </strong>{{stock.extendedPrice}}$<br/>
+<strong>After Hours Change: </strong>{{stock.changePercent}}%<br/>
+<strong>Max Price of Day: </strong>{{stock.high}}$<br/>
+<strong>Low Price of Day: </strong>{{stock.low}}$<br/>
+<strong>Percent Change: </strong>{{stock.changePercent}}%<br/>
+</div> </div>
       <div class="swiper-slide">Slide 2</div>
       <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
     </div>
+    
     <!-- If we need pagination
     <div class="swiper-pagination"></div>
    -->
@@ -75,12 +52,12 @@
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
+    <!-- If we need scrollbar 
+    <div class="swiper-scrollbar"></div> -->
   </div>
     </div>
 </div>
-    
+
     <footer class="bg-dark text-center text-white">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
@@ -120,5 +97,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src='swiper.js'></script>
+    <script src='index.js'></script>
   </body>
 </html>

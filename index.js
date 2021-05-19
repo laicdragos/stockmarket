@@ -65,14 +65,7 @@ app.get('/', function (req, res) {
     res.render('about');
 });
 
-//create route to Home 
-//app.get('/home.html', function (req, res) {
-  //call_api( function(doneAPI) {
-    //  res.render('home',{
-      //    stock: doneAPI
-      //});
-  //},'gme');  
-//});
+
 
 //create route to about 
 app.get('/about.html', function (req, res) {
@@ -100,4 +93,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.listen(PORT, () => console.log('Server Listening on port ' + PORT));
 
 
-
+//Set handlebar index GET route.
+app.get('/home.html', function (req, res) {
+  call_api( function(doneAPI) {
+      res.render('home',{
+          stock: doneAPI
+      });
+  },'swn');
+  
+});
